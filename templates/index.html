@@ -13,4 +13,23 @@
     {% endif %}
 </div>
 {{ wtf.quick_form(form) }}
+
+<!-- Lista de usuários cadastrados -->
+<div class="mt-4">
+    <h3>Relação de usuários cadastrados</h3>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Nome do Usuário</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for user in users %}
+            <tr>
+                <td><strong>{{ user.username }}</strong></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
 {% endblock %}
